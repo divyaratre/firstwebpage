@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delicious Bites</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    .menu-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .menu-images img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    form {
+      background: #f4f4f4;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #ff6347;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e5533d;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    .menu-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.menu-images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Delicious Bites</h1>
+  <p style = "font-size: large;">Fresh Food, Great Vibes</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <h2>Welcome to Delicious Bites!</h2>
+  <p>Your favorite place for mouth-watering dishes and cozy ambiance.</p>
+</section>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-images">
+    <img src="pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.avif" alt="Pizza">
+    <img src="Tomato-Pasta-Thumbnail.jpg"alt="Pasta">
+    <img src="burgur.jpeg"alt="Burger">
+    <img src="Fluffy-Cream-Cheese-Dessert-1.jpg" alt="Dessert">
+    <img src="images.jpeg"alt="Beverages">
+    
+
+  </div>
+
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We serve love on a plate! Located in the heart of the city, we bring you flavors from around the world.</p>
+</section>
+
+<section id="contact">
+  <h2>Reserve Your Table</h2>
+  <form id="bookingForm">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <input type="number" id="guests" placeholder="Number of Guests" min="1" max="10" required><br>
+    <input type="date" id="date" required><br>
+    <textarea id="message" placeholder="Any special requests?" rows="3"></textarea><br>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Delicious Bites. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const guests = document.getElementById('guests').value;
+    const date = document.getElementById('date').value;
+
+    alert(`Thank you ${name}! Your table for ${guests} guests has been booked on ${date}.`);
+    
+    // Clear form
+    document.getElementById('bookingForm').reset();
+
+
+  });
+</script>
+
+</body>
+</html>
